@@ -1,0 +1,985 @@
+<nav class="navbar navbar-fixed-top navbar-1">
+            <ul class="nav navbar-nav pull-left toggle-layout">
+                <li class="nav-item">
+
+                    <a class="nav-link" data-click="toggle-layout">
+                        <i class="zmdi zmdi-menu"></i>
+                    </a>
+                </li>
+            </ul>
+            <a class="navbar-brand" ng-href="/dashboard">Horus</a>
+            <ul class="nav navbar-nav pull-left toggle-fullscreen-mode">
+                <li class="nav-item">
+
+                    <a class="nav-link" data-click="toggle-fullscreen-mode">
+                        <i class="zmdi zmdi-fullscreen"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-left navbar-dropdown">
+                <li class="nav-item dropdown mega-dropdown">
+                    <mega-menu-1 class="ng-isolate-scope">
+
+                        <a class="nav-link dropdown-toggle no-after" data-toggle="dropdown">
+                            <i class="fa fa-plus"></i>
+                            <span class="nav-link-text">Navigation</span>
+                        </a>
+                        <div class="dropdown-menu mega-menu-1 dropdown-menu-scale from-left">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/dashboard">
+                                            <i class="fa fa-tachometer md-icon pull-left"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/agents">
+                                            <i class="fa fa-star md-icon pull-left"></i>
+                                            <span>Agents</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+                                        </ul>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/candidates">
+                                            <i class="fa fa-star md-icon pull-left"></i>
+                                            <span>Candidates</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="title" ng-href="/constituencies">
+                                            <i class="fa fa-cubes md-icon pull-left"></i>
+                                            <span>Constituencies</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/parties">
+                                            <i class="fa fa-adjust md-icon pull-left"></i>
+                                            <span>Parties</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/poll_stations">
+                                            <i class="fa fa-asterisk md-icon pull-left"></i>
+                                            <span>Polling Stations</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/messages">
+                                            <i class="fa fa-folder-open md-icon pull-left"></i>
+                                            <span>Messages</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/approve">
+                                            <i class="fa fa-table md-icon pull-left"></i>
+                                            <span>Approve</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title">
+                                            <i class="fa fa-shopping-cart md-icon pull-left"></i>
+                                            <span>Users</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                        <a class="title" ng-href="/intelli_wasp">
+                                            <i class="fa fa-envelope md-icon pull-left"></i>
+                                            <span>Intelli WASP</span>
+                                        </a>
+                                        <ul class="list-unstyled">
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li>
+
+                                       
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </mega-menu-1>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-left toggle-search">
+                
+            </ul>
+            <div class="navbar-drawer pull-left hidden-lg-down">
+                <form class="form-inline navbar-form ">
+
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>
+            </div>
+            <ul
+                class="nav navbar-nav pull-right hidden-lg-down navbar-toggle-theme-selector">
+                <li class="nav-item">
+
+                    <a class="nav-link" data-click="toggle-theme-selector">
+                        <i class="zmdi zmdi-settings"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right hidden-lg-down navbar-flags">
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle no-after" data-toggle="dropdown">
+                        <span class="flag flag-icon flag-icon-gb"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-scale from-right dropdown-menu-right">   
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right hidden-lg-down navbar-notifications">
+                <li class="nav-item">
+
+                    <a class="nav-link" data-click="toggle-right-sidebar">
+                        <i class="zmdi zmdi-notifications-active"></i>
+                        <span class="label label-rounded label-primary label-xs">3</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right hidden-lg-down navbar-profile">
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle no-after" data-toggle="dropdown">
+
+                    </a>
+                    <div class="dropdown-menu dropdown-no-overflow animation-delay">
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="theme-selector">
+            <p>Select theme</p>
+            <div class="select-palette">
+                <div class="color-palette" data-click="set-palette" data-id="palette-1">
+                    <span class="color-block" style="background: #0283f1"></span>
+                    <span class="color-block" style="background: #0267bf"></span>
+                    <span class="color-block" style="background: #f0ad4e"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-2">
+                    <span class="color-block" style="background: #003b84"></span>
+                    <span class="color-block" style="background: #002451"></span>
+                    <span class="color-block" style="background: #f0ad4e"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-3">
+                    <span class="color-block" style="background: #3c414f"></span>
+                    <span class="color-block" style="background: #262932"></span>
+                    <span class="color-block" style="background: #5cb85c"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-4">
+                    <span class="color-block" style="background: #1a1a1a"></span>
+                    <span class="color-block" style="background: #000000"></span>
+                    <span class="color-block" style="background: #5cb85c"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-5">
+                    <span class="color-block" style="background: #602697"></span>
+                    <span class="color-block" style="background: #461C6E"></span>
+                    <span class="color-block" style="background: #f0ad4e"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-6">
+                    <span class="color-block" style="background: #0283f1"></span>
+                    <span class="color-block" style="background: #ffffff"></span>
+                    <span class="color-block" style="background: #d9534f"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-7">
+                    <span class="color-block" style="background: #003b84"></span>
+                    <span class="color-block" style="background: #ffffff"></span>
+                    <span class="color-block" style="background: #d9534f"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-8">
+                    <span class="color-block" style="background: #1a1a1a"></span>
+                    <span class="color-block" style="background: #ffffff"></span>
+                    <span class="color-block" style="background: #d9534f"></span>
+                </div>
+                <div class="color-palette" data-click="set-palette" data-id="palette-9">
+                    <span class="color-block" style="background: #602697"></span>
+                    <span class="color-block" style="background: #ffffff"></span>
+                    <span class="color-block" style="background: #d9534f"></span>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navigation horizontal-navigation-1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="p-t-20 p-b-20">
+                            <ol class="breadcrumb icon-angle-right animation-delay">
+                                <li class="wow fadeIn">Home</li>
+                                <li class="wow fadeIn">{{moduleName}}</li>
+                                <li class="wow fadeIn active">Welcome</li>
+                            </ol>
+                            <div class="description">
+                                <h3 class="wow fadeIn delay-1000">{{moduleName}}</h3>
+                                <p class="wow fadeIn delay-1200">Welcome</p>
+                            </div>
+                            <ul class="list-unstyled navigation animation-delay">
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/dashboard">Dashboard</a>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/agents">Agents</a>
+                                    
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/candidates">Candidates</a>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/constituencies">Constituencies</a>
+                                   
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/parties">Parties</a>
+                                   
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/poll_stations">Polling Stations</a>
+                                    
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/messages">Messages</a>
+                                  
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/approve">Approve</a>
+                                 
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary">Users</a>
+                                    <div class="horizontal-dropdown-menu">
+                                        <a class="btn btn-primary sideline" ng-href="/users">App Users</a>
+                                        <a class="btn btn-primary sideline" ng-href="/admins">Administrators</a>
+                                    </div>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/intelli_wasp">Intelli WASP</a>
+                                    
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navigation horizontal-navigation-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="p-t-20 p-b-20">
+                            <ol class="breadcrumb icon-angle-right animation-delay">
+                                <li class="wow fadeIn">Home</li>
+                                <li class="wow fadeIn">{{moduleName}}</li>
+                                <li class="wow fadeIn active">Welcome</li>
+                            </ol>
+                            <div class="description">
+                                <h3 class="wow fadeIn delay-1000">{{moduleName}}</h3>
+                                <p class="wow fadeIn delay-1200">Welcome</p>
+                            </div>
+                            <ul class="list-unstyled navigation animation-delay">
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/dashboard">Dashboard</a>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/agents">Agents</a>
+                                   
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/candidates">Candidates</a>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/constituencies">Constituencies</a>
+                                  
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/parties">Parties</a>
+                                   
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/poll_stations">Polling Stations</a>
+                                    
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/messages">Messages</a>
+                                   
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/approve">Approve</a>
+                                    
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary">Users</a>
+                                    <div class="horizontal-dropdown-menu">
+                                        <a class="btn btn-primary sideline" ng-href="/users">App Users</a>
+                                        <a class="btn btn-primary sideline" ng-href="/admins">Administrators</a>
+                                       
+                                    </div>
+                                </li>
+                                <li class="horizontal-navigation-dropdown wow fadeIn">
+                                    <a class="btn btn-primary" ng-href="/intelli_wasp">Intelli WASP</a>
+                                   
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navigation horizontal-navigation-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-unstyled navigation">
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/dashboard">Dashboard</a>
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/agents">Agents</a>
+                              
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/candidates">Candidates</a>
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/constituencies">Constituencies</a>
+                               
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary"  ng-href="/parties">Parties</a>
+                              
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/poll_stations">Polling Stations</a>
+                              
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/messages">Messages</a>
+                               
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/approve">Approve</a>
+                               
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary">Users</a>
+                                <div class="horizontal-dropdown-menu">
+                                    <a class="btn btn-primary sideline" ng-href="/users">App Users</a>
+                                    <a class="btn btn-primary sideline" ng-href="/admins">Administrators</a>
+                                   
+                                </div>
+                            </li>
+                            <li class="horizontal-navigation-dropdown">
+                                <a class="btn btn-primary" ng-href="/intelli_wasp">Intelli WASP</a>
+                              
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar-placeholder"></div>
+                <div class="sidebar-outer-wrapper">
+                    <div class="sidebar-inner-wrapper">
+                        <div class="sidebar-1">
+                            <div class="profile">
+                                <button data-click="toggle-sidebar" type="button"
+                                    class="btn btn-white btn-outline no-border close-sidebar">
+                                    <i class="fa fa-close"></i>
+                                </button>
+                                <div class="profile-image">
+                                    <img class="img-circle img-fluid" src="assets/faces/m1.png">
+                                </div>
+                                <div class="social-media">
+                                    <button type="button" class="btn btn-facebook btn-circle m-r-5">
+                                        <i class="fa fa-facebook"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-twitter btn-circle m-r-5">
+                                        <i class="fa fa-twitter"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-google btn-circle m-r-5">
+                                        <i class="fa fa-google"></i>
+                                    </button>
+                                </div>
+                                <div class="profile-title">Lucas smith</div>
+                                <div class="profile-subtitle">lucas.smith@gmail.com</div>
+                                <div class="profile-toggle">
+                                    <button data-click="toggle-profile" type="button"
+                                        class="btn btn-white btn-outline no-border">
+                                        <i class="pull-right fa fa-caret-down icon-toggle-profile"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sidebar-nav">
+                                <div class="sidebar-section account-links">
+                                    <div class="section-title">Account</div>
+                                    <ul class="list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline">
+                                                <i class="zmdi zmdi-account-circle md-icon pull-left"></i>
+                                                <span class="title">Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="sideline">
+                                                <i class="zmdi zmdi-settings md-icon pull-left"></i>
+                                                <span class="title">Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="sideline">
+                                                <i class="zmdi zmdi-favorite-outline md-icon pull-left"></i>
+                                                <span class="title">Favorites</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="sideline">
+                                                <i class="zmdi zmdi-sign-in md-icon pull-left"></i>
+                                                <span class="title">Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-section">
+                                    <div class="section-title hidden">Navigation</div>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" ng-href="/dashboard">
+                                                <i class="zmdi zmdi-view-dashboard md-icon pull-left"></i>
+                                                <span class="title">Dashboard</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="layouts" data-click="toggle-section" ng-href="/agents">
+                                                <i class="pull-right fa fa-caret-down icon-layouts"></i>
+                                                <span class="pull-right label label-info label-rounded">9</span>
+                                                <i class="zmdi zmdi-collection-image-o md-icon pull-left"></i>
+                                                <span class="title">Agents</span>
+                                            </a>
+                                            <ul class="list-unstyled section-layouts l2">
+                                               
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" ng-href="/candidates">
+                                                <i class="zmdi zmdi-star-circle md-icon pull-left"></i>
+                                                <span class="title">Candidates</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-section">
+                                    <div class="section-title hidden"></div>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="ui" data-click="toggle-section" ng-href="/constituencies">
+                                                <i class="zmdi zmdi-labels md-icon pull-left"></i>
+                                                <span class="title">Constituencies</span>
+                                            </a>
+                                           
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="utilities" data-click="toggle-section" ng-href="/parties">
+                                                <i class="zmdi zmdi-settings md-icon pull-left"></i>
+                                                <span class="title">Parties</span>
+                                            </a>
+                                           
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="icons" data-click="toggle-section" ng-href="/poll_stations">
+                                                <i class="zmdi zmdi-flash md-icon pull-left"></i>
+                                                <span class="title">Polling Stations</span>
+                                            </a>
+                                            
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="forms" data-click="toggle-section" ng-href="/messages">
+                                                <i class="zmdi zmdi-folder-outline md-icon pull-left"></i>
+                                                <span class="title">Messages</span>
+                                            </a>
+                                           
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="tables" data-click="toggle-section" ng-href="/approve">
+                                                <i class="zmdi zmdi-format-list-numbered md-icon pull-left"></i>
+                                                <span class="title">Approve</span>
+                                            </a>
+                                          
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="e-commerce" data-click="toggle-section">
+                                                <i class="pull-right fa fa-caret-down icon-e-commerce"></i>
+                                                <i class="zmdi zmdi-shopping-cart md-icon pull-left"></i>
+                                                <span class="title">Users</span>
+                                            </a>
+                                            <ul class="list-unstyled section-e-commerce l2">
+                                                <li>
+                                                    <a class="sideline" href="/users">
+                                                        <span class="title">App Users</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="sideline" href="/admins">
+                                                        <span class="title">Administrators</span>
+                                                    </a>
+                                                </li>
+                                              
+                                               
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="email" data-click="toggle-section" ng-href="/intelli_wasp">
+                                                <i class="pull-right fa fa-caret-down icon-email"></i>
+                                                <i class="zmdi zmdi-email-open md-icon pull-left"></i>
+                                                <span class="title">Intelli WASP</span>
+                                            </a>
+                                           
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="charts" data-click="toggle-section">
+                                                <i class="pull-right fa fa-caret-down icon-charts"></i>
+                                                <span class="pull-right label label-warning label-pill">info</span>
+                                                <i class="zmdi zmdi-chart md-icon pull-left"></i>
+                                                <span class="title">Charts</span>
+                                            </a>
+                                            <ul class="list-unstyled section-charts l2">
+                                               
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="pages" data-click="toggle-section">
+                                                <i class="pull-right fa fa-caret-down icon-pages"></i>
+                                                <i class="zmdi zmdi-file-text md-icon pull-left"></i>
+                                                <span class="title">Pages</span>
+                                            </a>
+                                            <ul class="list-unstyled section-pages l2">
+                                               
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="extras" data-click="toggle-section">
+                                                <i class="pull-right fa fa-caret-down icon-extras"></i>
+                                                <i class="zmdi zmdi-lamp md-icon pull-left"></i>
+                                                <span class="title">Extras</span>
+                                            </a>
+                                            <ul class="list-unstyled section-extras l2">
+                                                
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-section">
+                                    <div class="section-title hidden">Documentation</div>
+                                    <ul class="l1 list-unstyled section-content">
+                                        <li>
+                                            <a class="sideline" data-id="docs" data-click="toggle-section"
+                                                href="documentation.html">
+                                                <i class="zmdi zmdi-info-outline md-icon pull-left"></i>
+                                                <span class="title">Docs</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-section">
+                                    <div class="section-title hidden">Menu</div>
+                                    <ul class="l1 list-unstyled section-content multi-level-menu">
+                                        <li>
+                                            <a class="sideline" data-id="multi-level-one" data-click="toggle-section">
+                                                <i class="pull-right fa fa-caret-down icon-multi-level-one"></i>
+                                                <i class="zmdi zmdi-filter-list md-icon pull-left"></i>
+                                                <span class="title">Multi level menu</span>
+                                            </a>
+                                            <ul class="l2 list-unstyled section-multi-level-one">
+                                                <li>
+                                                    
+                                                </li>
+                                               
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-labels m-t-20">
+                                    <h5>Tags</h5>
+                                    <ul class="list-unstyled">
+                                       
+                                    </ul>
+                                </div>
+                                <div class="sidebar-progress">
+                                    <h5>Project status</h5>
+                                    <div class="row">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-sidebar-outer">
+                    <div class="right-sidebar-inner">
+                        <div class="right-sidebar">
+                            <div class="bs-nav-tabs nav-tabs-warning justified">
+                                <ul class="nav nav-tabs nav-animated-border-from-center">
+                                   
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="rtab-left">
+                                        <h5>Today</h5>
+                                        <div class="timeline-widget-10">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Stream</h5>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="rtab-center">
+                                        <h5>Online</h5>
+                                        <div class="user-widget-8">
+                                            <div class="row">
+                                               
+                                            </div>
+                                        </div>
+                                        <h5>Offline</h5>
+                                        <div class="user-widget-8">
+                                            <div class="row">
+                                          
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="rtab-right">
+                                        <h5>Sales</h5>
+                                        <div class="m-b-10">
+                                            <div class="text-widget-1">
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <span class="fa-stack fa-stack-2x pull-left">
+                                                            <i class="fa fa-circle fa-stack-2x color-warning"></i>
+                                                            <i class="fa fa fa-usd fa-stack-1x color-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-xs-8 text-left">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="title">Today</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="numbers">
+                                                                    <div ng-if="increment">
+                                                                        <span class="amount" count-to-currency="1123.99"
+                                                                            value="0" duration="2">$1,123</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-b-10">
+                                            <div class="text-widget-1">
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <span class="fa-stack fa-stack-2x pull-left">
+                                                            <i class="fa fa-circle fa-stack-2x color-success"></i>
+                                                            <i class="fa fa fa-eur fa-stack-1x color-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-xs-8 text-left">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="title">Yesterday</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="numbers">
+                                                                    <div ng-if="increment">
+                                                                        <span class="amount" count-to-currency="1844"
+                                                                            value="0" duration="2">$1,844</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-b-10">
+                                            <div class="text-widget-1">
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <span class="fa-stack fa-stack-2x pull-left">
+                                                            <i class="fa fa-circle fa-stack-2x color-danger"></i>
+                                                            <i class="fa fa fa-btc fa-stack-1x color-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-xs-8 text-left">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="title">This week</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="numbers">
+                                                                    <div ng-if="increment">
+                                                                        <span class="amount" count-to-currency="7485"
+                                                                            value="0" duration="2">$7,485</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Twitter</h5>
+                                        <div class="m-b-10">
+                                            <div class="icon-widget-3 bg-twitter">
+                                                <div class="row icon">
+                                                    <div class="col-xs-12 text-center">
+                                                        <i class="color-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row icons">
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-twitter color-white"></i>
+                                                            <span class="color-white">90</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-comment-o color-white"></i>
+                                                            <span class="color-white">22</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-star-o color-white"></i>
+                                                            <span class="color-white">33</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Facebook</h5>
+                                        <div class="m-b-10">
+                                            <div class="icon-widget-3 bg-facebook">
+                                                <div class="row icon">
+                                                    <div class="col-xs-12 text-center">
+                                                        <i class=" color-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row icons">
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-thumbs-o-up color-white"></i>
+                                                            <span class="color-white">45</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-comment-o color-white"></i>
+                                                            <span class="color-white">51</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-star-o color-white"></i>
+                                                            <span class="color-white">13</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Google</h5>
+                                        <div class="m-b-10">
+                                            <div class="icon-widget-3 bg-google">
+                                                <div class="row icon">
+                                                    <div class="col-xs-12 text-center">
+                                                        <i class=" color-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row icons">
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-heart-o color-white"></i>
+                                                            <span class="color-white">8</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-comment-o color-white"></i>
+                                                            <span class="color-white">13</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                                        <div class="amount">
+                                                            <i class="fa fa-star-o color-white"></i>
+                                                            <span class="color-white">44</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Poll results</h5>
+                                        <div class="m-b-10 p-20">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <p>
+                                                        <span class="pull-right">24%</span>
+                                                        <span>Spain</span>
+                                                    </p>
+                                                    <progress class="progress-sm progress progress-warning"
+                                                        value="24" max="100">24%</progress>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <p>
+                                                        <span class="pull-right">52%</span>
+                                                        <span>USA</span>
+                                                    </p>
+                                                    <progress class="progress-sm progress progress-danger"
+                                                        value="52" max="100">52%</progress>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <p>
+                                                        <span class="pull-right">68%</span>
+                                                        <span>Australia</span>
+                                                    </p>
+                                                    <progress class="progress-sm progress progress-info"
+                                                        value="68" max="100">68%</progress>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <p>
+                                                        <span class="pull-right">45%</span>
+                                                        <span>Sweden</span>
+                                                    </p>
+                                                    <progress class="progress-sm progress progress-success"
+                                                        value="45" max="100">45%</progress>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Views container -->
+                <div class="col-xs-12 col-lg-12">
+                    <div class="row col-xs-12 m-b-10">
+                        <span>Notification Area</span>
+                    </div>
+                    <ng-view class="row col-xs-12 col-lg-12 main"></ng-view>
+                </div>
+<!--                <ng-view class="col-xs-12 main"></ng-view>-->
+
+               <!--  <div class="col-xs-12 main" id="main"> -->
+                    
+                
+            </div>
+        </div>
+        <!-- global scripts -->
+        

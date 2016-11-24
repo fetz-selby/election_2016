@@ -1,0 +1,38 @@
+<div class="table-responsive" ng-init='initPage()'>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Constituency</th>
+                        <th>Party</th>
+                        <th>Year</th>
+                        <th>Filename</th>
+                        <th>Votes</th>
+                        <th><button type="button" class="btn btn-info m-r-10 m-b-10 btn-flat">Action</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-danger text-bold"><div class="m-t-40"></div>{{candidate.id}}</td>
+                        <td><div class="m-t-40"></div>{{candidate.name}}</td>
+                        <td><div class="m-t-40"></div>{{candidate.constituency}}</td>
+                        <td><div class="m-t-40"></div>{{candidate.party}}</td>
+                        <td><div class="m-t-40"></div>{{candidate.year}}</td>
+                        <td>
+                            <div class="form-group floating-labels">
+                                <input id="filename" required ng-model="filename" autocomplete="off" type="text" name="filename">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group floating-labels">
+                                <input id="votes" required ng-model="votes" autocomplete="off" type="text" name="votes">
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="m-t-40"></div>
+                            <button type="button" class="btn btn-danger m-r-10 m-b-10 btn-flat" ng-click='showPopup()'>Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>

@@ -1,0 +1,88 @@
+<div class="col-xs-12 col-md-10 col-md-10 col-xl-10" ng-init='initPage()'>
+<form name="form" ng-submit="form.$valid && save()">
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+    
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="firstname">First name</label>
+                        <input id="firstname" required ng-model="fname" autocomplete="off" type="text" name="firstname">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="lastname">Last name</label>
+                        <input id="lastname" required ng-model="lname" autocomplete="off" type="text" name="lastname">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                    
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="year">Year</label>
+                            <select id="year" class="themes-select m-t-20" required ng-model='year' ng-options='year.value for year in years' name="year" ng-change='updateConstituencies()'>
+                            </select> 
+                        </div>
+                    </div>
+                
+                    <div class="col-xs-12 col-lg-6" ng-if='showConstituency'>
+                        <div class="form-group floating-labels">
+                            <label for="constituency">Constituency</label>
+                            <select id="constituency" class="themes-select m-t-20" required ng-model='constituency' ng-options="constituency.name for constituency in constituencies | orderBy: 'name'" name="constituency" ng-change='setConstituency(constituency)'>
+                            </select> 
+                        </div>
+                    </div>
+            </div>
+
+           <div class="row">
+                    <div class="col-xs-3 col-xl-6">
+                        <div class="form-group floating-labels">
+                            <label for="party">Party</label>
+                            <select id="party" class="themes-select m-t-20" ng-model='party' ng-options="party.name for party in parties | orderBy: 'name'" name="party">
+                            </select>
+                        </div>
+                    </div>
+               
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="type">Type</label>
+                            <select id="type" class="themes-select m-t-20" required ng-model='groupType' name="groupType">
+                                <option value="M">Parlimentary</option>
+                                <option value="P">Presidential</option>
+                            </select> 
+                        </div>
+                    </div>
+                   
+            </div>
+    
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="filename">Filename</label>
+                        <input id="filename" required ng-model="filename" autocomplete="off" type="text" name="filename">
+                    </div>
+                </div>
+               
+            </div>
+    
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="votes">Votes</label>
+                        <input id="votes" required ng-model="votes" autocomplete="off" type="text" name="votes">
+                    </div>
+                </div>
+               
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="submit" class="btn btn-lg btn-danger" value="add candidate">
+                </div>
+            </div>
+    </form>
+</div>

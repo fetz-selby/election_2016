@@ -1,0 +1,89 @@
+
+<div class="col-xs-12 col-lg-10" ng-controller='intelliMainController'>
+    <div class="m-b-40"><h4>Intelli WASP</h4></div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+            <div class="row m-b-10">
+			<div class="col-xs-12 col-lg-12">
+                <div class="m-b-20" ng-click='changeToConstituencyAnalysis()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+							<div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-code zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">constituency analysis</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-b-20" ng-click='changeToRegionalAnalysis()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+							<div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-code zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">regional analysis</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-b-10" ng-click='changeToNationalAnalysis()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+						      <div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-code zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">national analysis</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+        <div ng-switch on='moduleType' class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="animate-switch" ng-switch-when='na'>
+                <national-analysis-widget></national-analysis-widget>
+            </div>
+            <div class="animate-switch" ng-switch-when='ra'>
+                <regional-analysis-widget></regional-analysis-widget>
+            </div>
+            <div class="animate-switch" ng-switch-when='ca'>
+                <constituency-analysis-widget></constituency-analysis-widget>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

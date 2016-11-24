@@ -1,0 +1,102 @@
+<div class="col-xs-12 col-md-12 col-xl-12" ng-init='initPage()'>
+    
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+    
+    <div ng-if='showRemove' class="row">
+        <div class="col-xs-4 col-xl-4 col-lg-4">
+            <button type="button" ng-click='updateRegionalAnalysis()' class="btn btn-info m-r-10 m-b-10 btn-flat">Update Data</button>
+        </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    <hr ng-if='showRemove' />
+    <div class="m-b-20"></div>
+    
+    <div class="row" >
+        <div class="col-xs-12 col-xl-4 col-lg-6">
+            <div class="form-group floating-labels">
+                <label for="year">Years</label>
+                <select id="year" class="themes-select m-t-20" ng-model='year' ng-options="year.value for year in years | orderBy: 'value'" name="year">
+                </select> 
+            </div>
+        </div>
+        <div class="col-xs-4 col-xl-4">
+            <div class="form-group floating-labels">
+                <label for="region">Select Region</label>
+                <select id="region" class="themes-select m-t-20" ng-change='updateComputedRegions()' ng-model='region' ng-options='region.name for region in regions' name="region">
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-4 col-xl-4">
+            <a class="btn btn-warning" ng-click='loadRegionAnalysisData()'>load</a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-4 col-xl-4">
+            <div class="form-group floating-labels">
+                <label for="type">Select Type</label>
+                <select id="type" class="themes-select m-t-20" ng-model='type' name="type">
+                    <option value="M">Parliamentary</option>
+                    <option value="P">Presidential</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    <hr/>
+    <div class="m-b-20"></div>
+        
+    <div ng-if='showRemove' class="row">
+        <div class="col-xs-12 text-right">
+            <a ng-click='toggle()'>{{addOneVisibility}}</a>
+        </div>
+        <div ng-if="addOneVisibility == 'hide' && !saveDone">
+            <add-regional-analysis region-id = 'region.id' save-done='saveDone'></add-regional-analysis>
+        </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    <hr ng-if='isDataLoaded'/>
+    <div class="m-b-20"></div>
+       
+    <div class="row" ng-if='isDataLoaded'>
+        <div class="col-xs-12 col-xl-12 col-md-12 col-lg-12">
+            <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Party</th>
+                        <th>Votes</th>
+                        <th>Percentage</th>
+                        <th>Angle</th>
+                        <th>Bar</th>
+                        <th ng-if='showRemove' class="text-center"><button type="button" class="btn btn-info m-r-10 m-b-10 btn-flat">Action</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="regionAnalysis in regionsData">
+                        <td class="text-danger">{{regionAnalysis.id}}</td>
+                        <td>{{regionAnalysis.party}}</td>
+                        <td>{{regionAnalysis.votes}}</td>
+                        <td>{{regionAnalysis.percentage | number:2}}</td>
+                        <td>{{regionAnalysis.angle | number:2}}</td>
+                        <td>{{regionAnalysis.bar_ratio | number:2}}</td>
+                        <td ng-if='showRemove' class="text-center"><i class="zmdi zmdi-close zmdi-hc text-danger" ng-click='showRemovePopup(regionAnalysis.id)'></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //Select.init({className: 'select-theme-chosen', selector : '.regions'})
+    </script>
+    
+    
+
+</div>

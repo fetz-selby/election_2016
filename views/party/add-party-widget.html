@@ -1,0 +1,33 @@
+<div class="col-xs-12 col-md-10 col-md-10 col-xl-10">
+<form name="form" ng-submit="form.$valid && save()">
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="party">Party name</label>
+                        <input id="party" required ng-model="party.name" autocomplete="off" type="text" name="party">
+                        <p class="error-block">Please enter party name</p>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="logo">Logo Path</label>
+                        <input id="logo" required ng-model="party.path" autocomplete="off" type="text" name="logo">
+                        <p class="error-block">Please enter logo path</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m-b-40"></div>  
+            <div class="m-b-40"></div>        
+
+    
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="submit" class="btn btn-lg btn-danger" value="add party">
+                </div>
+            </div>
+    </form>
+</div>

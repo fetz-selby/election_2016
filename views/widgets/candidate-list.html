@@ -1,0 +1,32 @@
+<div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Party</th>
+                        <th>Candidate Name</th>
+                        <th>Votes</th>
+                        <th>Constituency</th>
+                        <th>Percentage(100)</th>
+                        <th>Angle(360)</th>
+                        <th>Bar(400)</th>
+                        <th>Avatar Path</th>
+                        <th ng-if='showRemove'><button type="button" class="btn btn-info m-r-10 m-b-10 btn-flat">Action</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="candidate in candidates | filter: search">
+                        <td class="text-danger text-bold">{{candidate.id}}</td>
+                        <td>{{candidate.party}}</td>
+                        <td>{{candidate.name}}</td>
+                        <td>{{candidate.votes | number}}</td>
+                        <td>{{candidate.constituency}}</td>
+                        <td>{{candidate.percentage | number:2}}</td>
+                        <td>{{candidate.angle | number:1}}</td>
+                        <td>{{candidate.bar_ratio | number:2}}</td>
+                        <td>{{candidate.avatar_path}}</td>
+                        <td ng-if='showRemove' class="text-center"><i class="zmdi zmdi-close zmdi-hc text-danger" ng-click='showPopup(candidate.id, $index)'></i></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>

@@ -1,0 +1,36 @@
+ <div class="table-responsive" ng-init='initPage()'>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th >Constituency</th>
+                        <th>Region</th>
+                        <th>Year</th>
+                        <th ng-if='showAutoCompute' class="text-center">Auto Compute</th>
+                        <th ng-if='showAutoCompute' class="text-center">
+                            <button type="button" class="btn btn-info m-r-10 m-b-10 btn-flat">Action</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="constituency in constituencies | filter: search">
+                        <td class="text-danger text-bold">{{constituency.id}}</td>
+                        <td>{{constituency.name}}</td>
+                        <td>{{constituency.region}}</td>
+                        <td>{{constituency.year}}</td>
+                        <td ng-if='showAutoCompute' >
+                            <div class="text-center">
+                                <input name="autoCompute" type="checkbox" ng-model='constituency.auto_compute'>
+                            </div>
+                        </td>
+                        <td ng-if='showAutoCompute' >
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger m-r-10 m-b-10 btn-flat" ng-click='showConfirmation(constituency.id, constituency.auto_compute)'>Update</button>
+                            </div>
+                        </td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+

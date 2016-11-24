@@ -1,0 +1,61 @@
+<div class="col-xs-12 col-md-12 col-md-12 col-xl-12" ng-init='initPage()'>
+
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6 col-lg-6">
+                    <div class="form-group floating-labels">
+                        <label for="year">Years</label>
+                        <select id="year" class="themes-select m-t-20" ng-model='year' ng-options="year.value for year in years | orderBy: 'value'" name="year">
+                        </select> 
+                    </div>
+                </div>
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <button type="button" class="btn btn-primary m-r-10 m-b-10 btn-flat" ng-click='getCandidates()'>Submit</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="m-b-20"></div>
+            <div class="m-b-20"></div>
+    
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="search">Search</label>
+                        <input id="search" ng-model="query.$" autocomplete="off" type="text" name="search">
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="constituency">Constituency</label>
+                        <input id="constituency" ng-model="query.constituency" autocomplete="off" type="text" name="constituency">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="party">Party</label>
+                        <input id="party" ng-model="query.party" autocomplete="off" type="text" name="party">
+                    </div>
+                </div>
+                  <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="type">Type</label>
+                            <select id="type" class="themes-select m-t-20" required ng-model='query.group_type' name="groupType">
+                                <option value="M">Parlimentary</option>
+                                <option value="P">Presidential</option>
+                            </select> 
+                        </div>
+                </div>
+            </div>
+    
+    
+            <div class="row" ng-if='candidatesLoaded'>
+                    <div class="col-xs-12 col-lg-12">
+                        <candidate-list candidates='candidates' search='query'></candidate-list>
+                    </div>
+            </div>
+
+</div>

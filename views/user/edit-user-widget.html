@@ -1,0 +1,74 @@
+<div class="col-xs-12 col-md-10 col-md-10 col-xl-10">
+<form name="form" ng-submit="form.$valid && save()">
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+            <div class="row" >
+                <div class="col-xs-12 col-xl-6">
+                    <div class="form-group floating-labels">
+                        <label for="name">Full Name</label>
+                        <input id="name" required ng-model="name" ng-disabled='true' autocomplete="off" type="text" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="email">Email</label>
+                            <input class="email" required ng-model="email" ng-disabled='true' autocomplete="off" type="email" name="email">
+                        </div>
+                    </div>
+            </div>
+    
+            <div class="row">
+                    
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="mobile">Mobile</label>
+                            <input class="mobile" required ng-model="mobile" ng-disabled='true' autocomplete="off" type="text" name="mobile">
+                        </div>
+                    </div>
+            </div>
+    
+    <div class="m-b-20"></div>
+    <hr />
+    <div class="m-b-20"></div>
+
+           <div class="row">
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="password">Old Password</label>
+                            <input class="olepassword" required ng-model="oldPassword" autocomplete="off" type="password" name="password">
+                            
+                        </div>
+                    </div>
+                  
+            </div>
+    
+        <div class="row">
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="password">New Password</label>
+                            <input class="password" required ng-model="password" autocomplete="off" type="password" name="password">
+                            <p class="error-block hidden"></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="form-group floating-labels">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input class="confirm-password" required ng-model="repassword" autocomplete="off" type="password" name="confirm-password">
+                            <p class="error-block hidden"></p>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="m-b-40"></div>  
+            <div class="m-b-40"></div> 
+    
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="submit" class="btn btn-lg btn-danger" value="Update User">
+                </div>
+            </div>
+    </form>
+</div>

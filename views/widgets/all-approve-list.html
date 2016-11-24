@@ -1,0 +1,33 @@
+<div class="table-responsive" ng-init='initPage()'>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Agent</th>
+                        <th>Constituency</th>
+                        <th>Poll Station</th>
+                        <th>Type</th>
+                        <th>Mobile</th>
+                        <th>Message</th>
+<!--                        <th><button type="button" class="btn btn-info m-r-10 m-b-10 btn-flat">Action</button></th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="approve in list | filter : search">
+                        <td class="text-danger text-bold">{{approve.id}}</td>
+                        <td>{{approve.agent}}</td>
+                        <td>{{approve.constituency}}</td>
+                        <td>{{approve.poll}}</td>
+                        <td>{{approve.type}}</td>
+                        <td>{{approve.mobile}}</td>
+                        <td>{{approve.message}}</td>
+                        <td ng-if='showAction' class="text-center">
+                            <i class="zmdi zmdi-check zmdi-hc text-success text-bold" style="cursor: pointer;" ng-click='showApprovePopup(approve.id, $index)'></i>
+                        </td>
+                        <td ng-if='showAction'>
+                            <i class="zmdi zmdi-close zmdi-hc text-danger text-bold" style="cursor: pointer;" ng-click='showRejectPopup(approve.id, $index)'></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+</div>

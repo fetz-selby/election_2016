@@ -1,0 +1,132 @@
+<div class="col-xs-12" ng-controller="dashboardCtrl" ng-init="initPage()">
+    
+    <div class="m-b-40"><h4>Dashboard</h4></div>
+    <div class="row">
+        <div class="pull-right">
+            <p>
+                <code>
+                <span data-countdown="2016/11/07"></span>
+			    </code>
+            </p>
+        </div>
+    </div>
+    <div class="row m-b-40">
+    <div class="icon-widget-3 bg-twitter">
+                <div class="row icon">
+                    <div class="col-xs-12 text-center"> 
+                        <i class=" color-white" style="padding:px">Approve</i> 
+                    </div>
+                </div>
+                <div class="row icons">
+                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                        <div class="amount"> <i class="fa fa-spinner color-white"></i>  <span class="color-white">{{totalPending}}</span> 
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                        <div class="amount"> <i class="fa fa-check color-white"></i>  <span class="color-white">{{totalApproved}}</span> 
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                        <div class="amount"> <i class="fa fa-close color-white"></i>  <span class="color-white">{{totalRejected}}</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-xl-6">   
+<!--
+            <div class="col-xs-6">
+                <div class="p-20">
+				    <h5> All sessions </h5>
+				    <p>Today</p>
+				</div>
+            </div>
+            <div class="col-xs-6">
+                <div class="easy-pie-chart-xs">
+				    <div easypiechart options="options" percent="percent"></div>
+				</div>
+            </div>
+-->
+            
+            <div class="col-xs-12 col-xl-12 m-b-20">
+                <p class="m-b-5 f-w-300">SMS</p>
+                <p class="text-sm">Push SMS Remaining</p>
+                <progress class="progress-sm progress progress-warning" value="33" max="100">33%</progress>
+            </div>
+            
+             <div class="col-xs-12 col-xl-12">
+                <div class="m-b-20">
+                    <div class="text-widget-3 bg-danger color-light">
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <div class="title"># of Auto Compute Constituencies</div>
+                                <div>
+                                    <span class="amount">{{totalAutoComputeConstituencies}}</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xl-12 col-md-12 col-lg-12">
+             <div class="m-b-20">
+                    <div class="text-widget-7 bg-success color-light">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="amount text-center">{{totalConstituencies}}</div>
+                                <div class="title text-center">Total Constituencies</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xl-12 col-md-12 col-lg-12">
+                <div class="m-b-20">
+                        <div class="text-widget-4 bg-light color-dark">
+                            <div class="title">Candidates</div>
+                            <div class="subtitle">Parliamentary</div>
+                            <div>
+                                <div class="amount">{{totalCandidates}}</div>
+                            </div>
+                            <span class="label label-outline label-success" ng-class="{'label-success': percent > 0, 'label-danger': percent < 0}" style=""> 2016 </span> 
+                            
+                        </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xl-12 col-md-12 col-lg-12">
+                <div class="m-b-20">
+                    <div class="text-widget-8 bg-warning color-light">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="title text-left">Agents</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="numbers text-left">
+                                    <div> <span class="amount" count-to-currency="563.66" value="0" duration="1">{{totalAgents}}</span> 
+                                    </div> <span class="percent color-light">(2016)</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-xl-6">
+            <div class="col-xs-12">
+                <div id="analytics-vector-map" class="vector-map" style="height:300px">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--    <script src='bower_components/d3/d3.js'></script>-->
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+    <script src="scripts/ui-elements-timers-and-counters.js"></script>
+    <script src='scripts/datamaps.js'></script>
+    <script src='scripts/index.js'></script>
+</div>

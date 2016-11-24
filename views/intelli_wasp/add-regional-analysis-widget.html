@@ -1,0 +1,36 @@
+ <div ng-init='initPage()'>
+    <div class="col-xs-2 col-xl-2">
+        <div class="form-group floating-labels">
+            <label for="year">Year</label>
+                <select id="year" class="themes-select m-t-20" ng-model='year' ng-options='year.value for year in years' name="year">
+                </select> 
+        </div>
+    </div>
+    <div class="col-xs-2 col-xl-2">
+        <div class="form-group floating-labels">
+            <label for="party">Party</label>
+                <select id="party" class="themes-select m-t-20" ng-model='party' ng-options='party.name for party in parties' name="party">
+                </select>
+        </div>
+    </div>
+     
+     <div class="col-xs-3 col-xl-3">
+        <div class="form-group floating-labels">
+            <label for="type">Type</label>
+                <select id="type" class="themes-select m-t-20" ng-model='type' name="type">
+                    <option value="M">Parliamentary</option>
+                    <option value="P">Presidential</option>
+                </select>
+        </div>
+    </div>
+     
+    <div class="col-xs-3 col-xl-3">
+        <div class="form-group floating-labels">
+            <label for="votes">Votes</label>
+                <input id="votes" ng-model="votes" autocomplete="off" type="text" name="votes">
+        </div>
+    </div>
+    <div class="col-xs-2 col-xl-2">
+        <a class="btn btn-danger" ng-click='saveRegionalAnalysis()'>add one</a>
+    </div>
+</div>

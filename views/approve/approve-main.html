@@ -1,0 +1,90 @@
+
+<div class="col-xs-12 col-lg-10" ng-controller='approveMainController'>
+    <div class="m-b-40"><h4>Approve</h4></div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+            <div class="row m-b-10">
+			<div class="col-xs-12 col-lg-12">
+				<div class="m-b-20" ng-click='changeToShowAll()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+							<div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-spinner zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">all requests</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-b-10" ng-click='changeToShowApproved()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+						      <div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-check zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">approved requests</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                
+                <div class="m-b-10" ng-click='changeToShowRejected()'>
+					<div class="text-widget-16 bg-danger-500 text-widget-md">
+						<div class="row">
+						      <div class="col-xs-12 m-b-20 m-t-20">
+								<div class="col-xs-3 left">
+									<div class="centered">
+										<i class="zmdi zmdi-close zmdi-hc-2x"></i>
+									</div>
+								</div>
+                                
+                                <div class="col-xs-6">
+                                    <div class="title color-white">rejected requests</div>
+                                </div>
+                                
+								<div class="col-xs-3 right bg-danger-500">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+        <div ng-switch on='module' class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="animate-switch" ng-switch-when='all'>
+                <all-approve-widget></all-approve-widget>
+            </div>
+            <div class="animate-switch" ng-switch-when='approve'>
+                <approve-widget></approve-widget>
+            </div>
+            <div class="animate-switch" ng-switch-when='reject'>
+                <reject-widget></reject-widget>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

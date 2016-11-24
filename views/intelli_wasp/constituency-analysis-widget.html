@@ -1,0 +1,118 @@
+<div class="col-xs-12 col-md-12 col-xl-12" ng-init='initPage()'>
+    
+    <script src="scripts/components/floating-labels.js"></script>
+    <script src="scripts/forms-basic.js"></script>
+    
+    <div ng-if='showUpdater' class="row">
+        <div class="col-xs-4 col-xl-4 col-lg-4">
+            <button type="button" ng-click='updateSeat()' class="btn btn-info m-r-10 m-b-10 btn-flat">Update Seats</button>
+        </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    <div class="m-b-20"></div>
+
+    <hr/>
+    <div class="m-b-20"></div>
+    <div class="m-b-20"></div>
+    
+    <div class="row" >
+        <div class="col-xs-12 col-xl-3 col-lg-3">
+            <div class="form-group floating-labels">
+                <label for="year">Years</label>
+                <select id="year" class="themes-select m-t-20" ng-model='year' ng-options="year.value for year in years | orderBy: 'value'" name="year">
+                </select> 
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-xl-3 col-lg-3">
+            <div class="form-group floating-labels">
+                <label for="type">Type</label>
+                <input id="type" ng-model="type" ng-disabled='true' autocomplete="off" type="text" name="type">
+            </div>
+        </div>
+        
+        <div class="col-xs-4 col-xl-3 col-lg-3">
+            <div class="form-group floating-labels">
+                <label for="region">Select Region</label>
+                <select id="region" class="themes-select m-t-20" ng-model='region' ng-options='region.name for region in regions' name="region">
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-4 col-xl-3 col-lg-3">
+            <a class="btn btn-warning" ng-click='getConstituencyAnalysis()'>load</a>
+        </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    <div class="m-b-20"></div>
+
+    <hr/>
+    
+    <div class="m-b-20"></div>
+    <div class="m-b-20"></div>
+    
+    <div class="row" >
+        <div class="col-xs-12 col-xl-4">
+            <div class="form-group floating-labels">
+                <label for="search">Search</label>
+                <input id="search" ng-model="query.$" autocomplete="off" type="text" name="search">
+            </div>
+         </div>
+        
+        <div class="col-xs-12 col-xl-4">
+            <div class="form-group floating-labels">
+                <label for="search">Party</label>
+                <input id="search" ng-model="query.party" autocomplete="off" type="text" name="search">
+            </div>
+         </div>
+        
+         <div class="col-xs-12 col-xl-4">
+            <div class="form-group floating-labels">
+                <label for="search">Constituency</label>
+                <input id="search" ng-model="query.constituency" autocomplete="off" type="text" name="search">
+            </div>
+         </div>
+    </div>
+    
+    <div class="m-b-20"></div>
+    
+    <div class="m-b-20"></div>
+    <div class="m-b-20"></div>
+       
+    <div class="row" ng-if='isDataLoaded'>
+        <div class="col-xs-12 col-xl-12 col-md-12 col-lg-12">
+            <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Candidate</th>
+                        <th>Party</th>
+                        <th>Constituency</th>
+                        <th>Votes</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="constituencyAnalysis in constituenciesData | filter: query">
+                        <td class="text-danger">{{constituencyAnalysis.id}}</td>
+                        <td>{{constituencyAnalysis.candidate}}</td>
+                        <td>{{constituencyAnalysis.party}}</td>
+                        <td>{{constituencyAnalysis.constituency}}</td>
+                        <td>{{constituencyAnalysis.votes}}</td>
+                        <td>{{constituencyAnalysis.percentage | number:2}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //Select.init({className: 'select-theme-chosen', selector : '.regions'})
+    </script>
+    
+    
+
+</div>

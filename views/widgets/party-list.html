@@ -1,0 +1,20 @@
+
+<div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Party</th>
+                        <th>Logo Path</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="party in parties | filter: search">
+                        <td class="text-danger text-bold">{{party.id}}</td>
+                        <td>{{party.name}}</td>
+                        <td>{{party.logo_path}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+

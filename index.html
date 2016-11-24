@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="en" ng-app='login'>
+
+<head>
+	<meta charset="utf-8">
+<title>Horus</title>
+<meta name="description" content="Horus TV3 elections">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<!-- global stylesheets -->
+<link rel="stylesheet" href="styles/bootstrap.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/1.0.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body data-layout="empty-view">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 main" id="main">
+				<div class="login-page text-center">
+    <h1>Horus</h1>
+    <h4>Please enter your email address and password to login</h4>
+
+    <div class="row" ng-controller="loginController" ng-init='initPage()'>
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+
+            <form name="form" ng-submit='form.$valid && submitForm()' novalidate class="form">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group floating-labels">
+                            <label for="email">Email</label>
+                            <input id="email" autocomplete="off" required ng-model='email' type="email" name="email">
+                            <p class="error-block"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-40">
+                    <div class="col-xs-12">
+                        <div class="form-group floating-labels">
+                            <label for="password">Password</label>
+                            <input id="password" autocomplete="off" required ng-model='password' type="password" name="password">
+                            <p class="error-block"></p>                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row buttons">
+                    <div class="col-xs-3 col-md-3"> </div>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-info btn-block m-b-20" value="Login">
+                    </div>
+                    <div class="col-xs-3 col-md-3"> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="social-buttons">
+        
+    </p>
+    <p class="copyright text-sm">&copy; Copyright 2016</p>
+</div>
+            </div>
+        </div>
+    </div>
+    <!-- global scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="bower_components/tether/dist/js/tether.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/PACE/pace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+<script src="scripts/components/jquery-fullscreen/jquery.fullscreen-min.js"></script>
+<script src="bower_components/jquery-storage-api/jquery.storageapi.min.js"></script>
+<script src="bower_components/wow/dist/wow.min.js"></script>
+<script src="scripts/functions.js"></script>
+<script src="scripts/colors.js"></script>
+<script src="scripts/left-sidebar.js"></script>
+<script src="scripts/navbar.js"></script>
+<script src="scripts/horizontal-navigation-1.js"></script>
+<script src="scripts/horizontal-navigation-2.js"></script>
+<script src="scripts/horizontal-navigation-3.js"></script>
+<script src="scripts/main.js"></script>
+<script src="bower_components/notifyjs/dist/notify.js"></script>
+<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="scripts/components/floating-labels.js"></script>
+<script src="scripts/pages-login.js"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+    
+     <!-- controllers goes here -->
+
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/config-login.js"></script>
+<script src="scripts/controllers/login-ctrl.js"></script>
+    
+    <!-- services  -->
+<script src="scripts/services/login-service.js"></script>
+    
+</body>
+
+</html>
