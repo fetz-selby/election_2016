@@ -7,7 +7,8 @@ var express = require('express'),
     sql = require('./sql'),
     Pusher = require('./push_config'),
     pusher = Pusher.pusher(),
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || 3000,
+    json2xls = require('json2xls');
     
 var app = express();
 var smsDispatcher = require('./service/sms_gateway');
@@ -37,6 +38,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(session({resave:true, saveUninitialized: true, secret: 'thequickbrownfoxjumpedoverthelazydog',cookieName: 'session', duration: 30*60*1000, activeDuration: 5*60*1000, httpOnly: true, cookie: {secure: false }}));
+
+//Excel parser middleware
+app.use(json2xls.middleware);
 
 //CORS enabling
 app.use(function(req, res, next) {

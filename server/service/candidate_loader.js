@@ -10,7 +10,7 @@ var service = function(){
    
 
     // Asynchronous read
-    fs.readFile('../resources/sh5.csv', function (err, data) {
+    fs.readFile('../resources/sh2016.csv', function (err, data) {
        if (err) {
           return console.error(err);
        }
@@ -36,11 +36,14 @@ var doExtraction = function(element, index){
 
     var candidate = {};
     candidate.name = dataColumns[0].trim();
+
+    console.log('*** candidate '+candidate.name);
+
     candidate.party = dataColumns[1].trim();
-    candidate.votes = dataColumns[2].trim();
-    candidate.year = dataColumns[3].trim();
-    candidate.constituency = dataColumns[4].trim();
-    candidate.group_type = dataColumns[5].trim();
+    candidate.votes = 0;
+    candidate.year = dataColumns[2].trim();
+    candidate.constituency = dataColumns[3].trim();
+    candidate.group_type = dataColumns[4].trim();
 
     fetchForParentConstituency(candidate);
 }
@@ -55,7 +58,7 @@ sql.execute({
           },
           year:{
               type: sql.CHAR,
-              val: 2012
+              val: 2016
           }
       }
   }).then(function(results){
@@ -64,7 +67,7 @@ sql.execute({
         candidate.constituency_id = results[0].id;
 
         //Insert candidate
-        insertCandidate(candidate);
+        //insertCandidate(candidate);
       }else{
         console.log('Bad constituency => '+candidate.constituency);
       }
@@ -74,6 +77,7 @@ sql.execute({
 }
 
 var insertCandidate = function(candidate){
+  //console.log(getPartyCode(candidate.party));
   sql.execute({
       query:'insert into candidates(name,party_id,constituency_id,votes,group_type,year,percentage,angle,bar_ratio) values(@name,@party,@consId,@votes,@group,@year,0,0,0)',
       params:{
@@ -91,7 +95,7 @@ var insertCandidate = function(candidate){
           },
           votes:{
               type: sql.INT,
-              val: candidate.votes
+              val: 0
           },
           group:{
               type: sql.CHAR,
@@ -99,7 +103,7 @@ var insertCandidate = function(candidate){
           },
           year:{
               type: sql.CHAR,
-              val: 2012
+              val: 2016
           }
       }
   }).then(function(results){
@@ -110,60 +114,72 @@ var insertCandidate = function(candidate){
 }
 
 var getPartyCode = function(party){
-  if(party.toLowerCase() == 'npp'){
+  if(party.toLowerCase().trim() == 'npp'){
     return 1;
-  }else if(party.toLowerCase() == 'ndc'){
+  }else if(party.toLowerCase().trim() == 'ndc'){
     return 2;
-  }else if(party.toLowerCase() == 'cpp'){
+  }else if(party.toLowerCase().trim() == 'cpp'){
     return 3;
-  }else if(party.toLowerCase() == 'pnc'){
+  }else if(party.toLowerCase().trim() == 'pnc'){
     return 4;
-  }else if(party.toLowerCase() == 'ind'){
-    return 5;
-  }else if(party.toLowerCase() == 'pcp'){
+  }else if(party.toLowerCase().trim() == 'ind'){
+    return 6;
+  }else if(party.toLowerCase().trim() == 'pcp'){
     return 7;
-  }else if(party.toLowerCase() == 'ncp'){
+  }else if(party.toLowerCase().trim() == 'ncp'){
     return 8;
-  }else if(party.toLowerCase() == 'eagle'){
+  }else if(party.toLowerCase().trim() == 'egle'){
     return 9;
-  }else if(party.toLowerCase() == 'gcpp'){
+  }else if(party.toLowerCase().trim() == 'gcpp'){
     return 10;
-  }else if(party.toLowerCase() == 'dpp'){
+  }else if(party.toLowerCase().trim() == 'dpp'){
     return 11;
-  }else if(party.toLowerCase() == 'dfp'){
+  }else if(party.toLowerCase().trim() == 'dfp'){
     return 12;
-  }else if(party.toLowerCase() == 'nvp'){
+  }else if(party.toLowerCase().trim() == 'nvp'){
     return 13;
-  }else if(party.toLowerCase() == 'rpd'){
+  }else if(party.toLowerCase().trim() == 'rpd'){
     return 14;
-  }else if(party.toLowerCase() == 'nrp'){
+  }else if(party.toLowerCase().trim() == 'nrp'){
     return 16;
-  }else if(party.toLowerCase() == 'ugm'){
+  }else if(party.toLowerCase().trim() == 'ugm'){
     return 17;
-  }else if(party.toLowerCase() == 'ppp'){
+  }else if(party.toLowerCase().trim() == 'ppp'){
     return 18;
-  }else if(party.toLowerCase() == 'ndp'){
+  }else if(party.toLowerCase().trim() == 'ind2'){
+    return 20;
+  }else if(party.toLowerCase().trim() == 'ind3'){
+    return 21;
+  }else if(party.toLowerCase().trim() == 'ndp'){
     return 22;
-  }else if(party.toLowerCase() == 'ufp'){
+  }else if(party.toLowerCase().trim() == 'none'){
+    return 23;
+  }else if(party.toLowerCase().trim() == 'ufp'){
     return 25;
-  }else if(party.toLowerCase() == 'ipp'){
+  }else if(party.toLowerCase().trim() == 'ipp'){
     return 26;
-  }else if(party.toLowerCase() == 'gfp'){
+  }else if(party.toLowerCase().trim() == 'gfp'){
     return 27;
-  }else if(party.toLowerCase() == 'ypp'){
+  }else if(party.toLowerCase().trim() == 'ypp'){
     return 28;
-  }else if(party.toLowerCase() == 'urp'){
+  }else if(party.toLowerCase().trim() == 'urp'){
     return 29;
-  }else if(party.toLowerCase() == 'noc'){
+  }else if(party.toLowerCase().trim() == 'ind4'){
+    return 30;
+  }else if(party.toLowerCase().trim() == 'noc'){
     return 31;
-  }else if(party.toLowerCase() == 'nop'){
+  }else if(party.toLowerCase().trim() == 'nop'){
     return 32;
-  }else if(party.toLowerCase() == 'gnp'){
+  }else if(party.toLowerCase().trim() == 'gnp'){
     return 33;
-  }else if(party.toLowerCase() == 'upp'){
+  }else if(party.toLowerCase().trim() == 'upp'){
     return 34;
-  }else if(party.toLowerCase() == 'apc'){
+  }else if(party.toLowerCase().trim() == 'apc'){
     return 36;
+  }else if(party.toLowerCase().trim() == 'ipc'){
+    return 39;
+  }else{
+    consoloe.log('********** Party => '+party);
   }
 }
 

@@ -139,6 +139,32 @@ var routes = function(sql){
                             });   
                         }
                     })
+
+    constituencyRouter.route('/declared')
+                .get(function(req, res){
+                    if(req.query.year && req.query.regionId){
+                        var year = req.query.year,
+                            regionId = req.query.regionId;
+                        
+                        sql.execute({
+                                query:'select count(ca.id) as count from constituency_seat ca join constituencies cons on cons.id = ca.cons_id join parties par on par.id = ca.party_id join candidates can on can.id = ca.candidate_id where ca.year = @year and ca.region_id = @regionId',
+                                params:{
+                                    year:{
+                                        type: sql.VARCHAR,
+                                        val: year
+                                    },
+                                    regionId:{
+                                        type: sql.INT,
+                                        val: regionId
+                                    }
+                                }
+                            }).then(function(results){
+                                res.status(200).json(results);
+                            }, function(err){
+                                console.log(err);
+                            });   
+                        }
+                    })
     
      constituencyRouter.route('/region/:id')
                 .get(function(req, res){

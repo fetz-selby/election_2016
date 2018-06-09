@@ -125,6 +125,64 @@ var routes = function(sql){
                                 console.log(err);
                             });           
                 });
+
+    candidatesRoute.route('/download/presidential')
+        .get(function(req, res){
+                
+                    if(req.query.year){
+                          var year = req.query.year;                        
+                          sql.execute({
+                                query:'select c.name,p.name as party,c.votes,c.percentage,cons.name as constituency from candidates c join parties p on p.id = c.party_id join constituencies cons on cons.id = c.constituency_id where c.year = @year and c.group_type=@group order by constituency asc',
+                                params:{
+                                    year:{
+                                        type: sql.VARCHAR,
+                                        val: year
+                                    },
+                                    group:{
+                                        type: sql.VARCHAR,
+                                        val: 'P'
+                                    }
+
+                                }
+                            }).then(function(results){
+                                res.xls('presidential_data.xls',results);
+                            }, function(err){
+                                console.log(err);
+                            });
+                        
+                    }else{
+                        res.status(400).send('Please provide [year] parameter');
+                    }          
+    });
+
+    candidatesRoute.route('/download/parliamentary')
+        .get(function(req, res){
+                
+                    if(req.query.year){
+                          var year = req.query.year;                        
+                          sql.execute({
+                                query:'select c.name,p.name as party,c.votes,c.percentage,cons.name as constituency from candidates c join parties p on p.id = c.party_id join constituencies cons on cons.id = c.constituency_id where c.year = @year and c.group_type=@group order by constituency asc',
+                                params:{
+                                    year:{
+                                        type: sql.VARCHAR,
+                                        val: year
+                                    },
+                                    group:{
+                                        type: sql.VARCHAR,
+                                        val: 'M'
+                                    }
+
+                                }
+                            }).then(function(results){
+                                res.xls('parliamentary_data.xls',results);
+                            }, function(err){
+                                console.log(err);
+                            });
+                        
+                    }else{
+                        res.status(400).send('Please provide [year] parameter');
+                    }          
+    });
     
      candidatesRoute.route('/all')
                 .get(function(req, res){           
@@ -150,7 +208,7 @@ var routes = function(sql){
      
      candidatesRoute.route('/work')
                 .get(function(req, res){                              
-                    doWork(sql, res);
+                    doWork(sql, res, req);
                 })
     
       candidatesRoute.route('/constituency/:id')
@@ -370,7 +428,7 @@ var routes = function(sql){
         }
     }
     
-    var doWork = function(sql, res){
+    var doWork = function(sql, res, req){
         
         if(req.query.year && req.query.type){
             var years = [],
