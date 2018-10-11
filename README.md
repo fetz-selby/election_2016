@@ -17,4 +17,3 @@ regions, constituencies, and polling stations of Ghana.
 * [Angular](https://angularjs.org/)
 * [NodeJS](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
-* [JWT](https://jwt.io/)
